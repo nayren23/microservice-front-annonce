@@ -6,6 +6,9 @@ on:
     pull_request:
       branches:
         - main
+    push:
+        branches:
+            - main
 
 env: #we need to set the tag to the latest tag
   LATEST_TAG: nayren/microservice-front:latest
