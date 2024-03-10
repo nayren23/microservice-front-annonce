@@ -35,9 +35,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./UniRide
+          context: .
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.LATEST_TAG }}   
-          build-args: | #we need to pass the secrets to the dockerfile
-            PRODUCTION=${{ secrets.PRODUCTION }}
